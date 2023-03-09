@@ -25,6 +25,6 @@ function ExibirMessageSucesso(){
 function ExibirMessageErro(){
     //alert('Erro: Campo A não Pôde ser Menor ou igual que Campo B');
     ViewContenedorMessagem.style.background = 'red';
-    ViewContenedorMessagem.innerHTML='Erro: <b>Campo A</b> não Pôde ser Menor ou igual que <b>Campo B</b>';
+    ViewContenedorMessagem.innerHTML='Erro: <b>Campo A</b> não Pôde ser Menor que <b>Campo B</b>';
     ViewContenedorMessagem.style.display='block';
 }
