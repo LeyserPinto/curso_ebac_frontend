@@ -6,74 +6,195 @@
     box-sizing: border-box;
     font-family: 'Raleway', sans-serif;
 }
-
+.container-flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
 /*header*/
 body header{
     width: 100%;
     height: 8rem;
-    padding-top: 10px;
     text-align: center;
-    background-color: #212122;
+    position: fixed;
+    z-index: 1;
+
 }
-/*header*/
-body header h1 a,h2,h3,small{
+
+header #header-topper{
+    max-width: 1500px;
+    color: #fff;    
+    padding: 15px;
+    background-color: #04041a;
+}
+/**
+Hamburguer Header 
+*/
+#hamburguer-menu{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    cursor: pointer;
+    transition: all ease-in-out .25s;
+}
+#hamburguer-menu span{
+    width: 35px;
+    height:3px;
+    background-color: #fff;
+}
+#hamburguer-menu:hover{
+    transform: scale(1.1);
+}
+nav{
+    background-color: #0c0c1e;
+    padding: 10px;
+    display: none;
+}
+
+nav ul{
+justify-content: center !important;
+gap: 10px;
+}
+nav ul li{
+    list-style: none
+}
+nav ul li a{
+   color: #fff;
+   text-decoration: none;
+   text-transform: uppercase;
+}
+nav ul li a{
+    color: #fff;
     text-decoration: none;
-    color: #e7e7e7;
+    text-transform: uppercase;
+    transform: scale(0);
+    transition: all ease-in-out .5s;
 }
-body header >h2{
-    font-size: 1.4rem;
-    color: #ffcc00;
+nav ul li a:hover{
+    color: #6f00ff;
 }
-body header >h3{
-    font-size: 1rem;
+/*Carousel*/
+#carousel{
+    overflow: hidden;
+    height:65vh;
 }
-body header >small{
-    font-size: .8rem;    
-    font-style: italic;
+
+
+/*********/
+/*Sobre Section*/
+#sobre{
+    gap: 10px;
+    align-items: flex-start;
+}
+#imagem{
+    width: 50%;
+
+}
+#imagem >img{
+    width: 100%;
     
 }
+#txt{
+    padding-top: 10px;
+    width: 50%;
+}
 
 
-/*Formulario*/
+/*********/
+/*Em Destaque Section Section*/
 
-form{
-    margin: 2rem auto;
-    padding: 1rem;
-    width: 18em;
-    border: 2px solid #0c0c0c;
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: column;    
-    align-items: center;
+#Destaques{
+    
+    width: 100%;
+    max-width: 1500px;
+    padding: 15px;
+}
+#Destaques h2{
+    text-align: center;
+    margin-bottom: 10px;
+}
+#destaquesContainer,#promocoesContainer{
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fill,
+        minmax(250px,1fr)
+    );
+    grid-auto-rows: 400px;
     gap: 10px;
 }
-form button{
-    width: 100px;
-    height: 25px;
-    background: -o-linear-gradient(45deg,#0c0c0c,#212122);
-    background: -webkit-linear-gradient(45deg,#0c0c0c,#212122);
+.Card,.pCard{    
+    box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, .5);
+    padding: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+.Card button,.pCard button{
+    position: absolute;
+    bottom: 20px;
+    margin-top: 15px;
+}
+.Card figure img, .pCard figure img {
+    width: 100%;
+}
+
+.Card figure figcaption, .pCard figure figcaption{
+    align-items: flex-start;
+    flex-direction: column    
+}
+figure figcaption h3{
+    font-size: 1.2em;
+    text-transform: uppercase;
+}
+figure figcaption p{
+    font-size: .8em;
+color: #848484;
+}
+figure figcaption del{
+    font-size: 1.4em;
+    color: #e3af06;
+}
+figure figcaption strong{
+    font-size: 1.8em;
+    color: #6f00ff;
+}
+.mButton{
     border: none;
     outline: none;
-    color: #f7f7f7;
+    min-width: 90%;
+    padding: 8px;
+    background-color: #6f00ff;
+    color: #fff;
+    border-radius: 5px;
     cursor: pointer;
-    transition: all ease-in-out .2s;
+    transition: all ease-in-out .3s;
 }
-form button:hover{
-    background: transparent;
-    border: thin solid #212122;
-    color: #212122;
+.mButton:hover{
+    transform: scale(1.1);
 }
-
-
-.Message{
+#Promocoes{
     margin: 0 auto;
-    width: 18em;
-    height: 50px;
-    padding: 1em;
-    text-align: center;
-    background-color: red;
-    color: #FFF;
-    font-size: .8em;
-    display: none;
+}
+#promocoesContainer{
+    grid-auto-rows: 450px !important;
+}
+#contato{
+    margin-top: 20px;
+    width: 100%;
+    max-width: 1500px;
+    height: 80vh;
+    padding: 10px;
+}
+form{
+    width: 450px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+form input{
+    width: 100%;
+    padding: 10px;
+    border: none;
 }

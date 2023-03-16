@@ -1,30 +1,47 @@
 
-const ViewFormulario = document.getElementById('form-modulo7');
-const ViewCampoA = document.getElementById('campoA');
-const ViewCampoB = document.getElementById('campoB');
-const ViewContenedorMessagem = document.querySelector('.Message');
-ViewFormulario.addEventListener('submit',(e)=>{
-   e.preventDefault();
+$(document).ready(() => {
+    $('#carousel').slick({
+        autoplay: true,
+    })
+    $('#ftel').mask('(00) 00000-0000');
+    $('#fcpf').mask('000.000.000-00');
+    $('#fcep').mask('00000-000');
 
-   
-   ViewCampoA.value < ViewCampoB.value ? ExibirMessageErro() : ExibirMessageSucesso()
-   
+})
+
+$('.Card button,.pCard button').click(()=>{
+    console.log('on Scroll');
+    const destino = $('#contato');
+
+    $('html').animate({
+        scrollTop:destino.offset().top
+    },1000)
+})
+$('#hamburguer-menu').click(() => {
+    $('header nav').slideToggle();
+})
+
+$('form').validate({ // seletor do formulário
+    rules: {
+        nome: {
+            required: true,
+        },
+        email: {
+            email: true,
+            required: true,
+        },
+        tel:{
+            required:true
+        },
+        cpf:{
+            required:true
+        }
+
+    },
+    messages: { // Opcional, customize as mensagens de erro
+        nome: 'Por favor, insira o seu nome',
+        email: 'Insira Email valido',
+        tel: 'Insira Número Telefone valido',
+        cpf: 'Insira CPF valido',
+    }
 });
-
-
-function ExibirMessageSucesso(){
-    //alert('Formulario Enviado com Sucesso');
-    ViewContenedorMessagem.style.background = 'green';
-    ViewContenedorMessagem.innerHTML='Formulario Enviado com Sucesso';
-    ViewContenedorMessagem.style.display='block';
-
-    setTimeout(()=>{
-        location.reload();
-    },3500)
-}
-function ExibirMessageErro(){
-    //alert('Erro: Campo A não Pôde ser Menor ou igual que Campo B');
-    ViewContenedorMessagem.style.background = 'red';
-    ViewContenedorMessagem.innerHTML='Erro: <b>Campo A</b> não Pôde ser Menor que <b>Campo B</b>';
-    ViewContenedorMessagem.style.display='block';
-}

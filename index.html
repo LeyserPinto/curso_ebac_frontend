@@ -1,36 +1,196 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles.css">
-    <title>Exercicio - Modulo 3</title>
+    <link rel="stylesheet" href="src/slick/slick.css">
+    <link rel="stylesheet" href="src/slick/slick-theme.css">
+    <title>Exercicio - Modulo 10</title>
 </head>
+
 <body>
-    
-<!---Header-->
+
+    <!---Header-->
     <header>
-        <h1><a href="#">Formulario HTML</a></h1>
-        <h2>Modulo 7: Integrando HTML Com Javascript</h2>
-        <h3>EBAC</h3>
-        <small>Leyser Erick P Estrada</small>
+        <section id="header-topper" class="container-flex">
+            <h1>EBAC Motors</h1>
+            <div id="hamburguer-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </section>
+        <nav>
+            <ul class="container-flex">
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#Destaques">Em Destaque</a></li>
+                <li><a href="#Promocoes">Promoções</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+
     </header>
+    <!--Corousel-->
+    <div id="carousel">
+        <img src="https://quatrorodas.abril.com.br/wp-content/uploads/2021/11/Porsche-911-GT3-2021-PDK-22.jpg?quality=70&strip=info&w=1280&h=720&crop=1"
+            alt="Carro da Porsche">
+        <img src="https://revistacarro.com.br/wp-content/uploads/2022/01/BMW-iX_3.jpg" alt="Carro da BMW">
+        <img src="https://www.automaistv.com.br/wp-content/uploads/2022/12/2023-Ford-GT-Mk-IV_02_edited-e1670592301996.jpg"
+            alt="Carro da Ford">
+    </div>
+    <!--Sobre Section-->
+    <div id="sobre" class="container-flex">
+        <section id="imagem">
+            <img src="https://quatrorodas.abril.com.br/wp-content/uploads/2020/08/DSCF0019_v2.jpg?quality=70&strip=info"
+                alt="Imagem de Dentro da Loja EBAC Motors">
+        </section>
+        <section id="txt">
+            <h2>Sobre EBAC Motors</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam explicabo quaerat natus eos nisi, pariatur
+                voluptate qui doloribus dolorum saepe eum! Nesciunt aperiam dolorum velit illo provident, iste libero
+                optio?</p>
+        </section>
+    </div>
+    <!--Destaques-->
+    <div id="Destaques">
+        <h2>Nossos Destaques</h2>
+        <div id="destaquesContainer">
+            <div class="Card">
+                <figure>
+                    <img src="https://quatrorodas.abril.com.br/wp-content/uploads/2021/10/BMW-iX-xDrive-i40-Mineral-White-003-e1634235799239.jpg?quality=70&strip=info&w=1280&h=720&crop=1"
+                        alt="Carro em Destaque: ">
+                    <figcaption class="container-flex">
+                        <h3>BMW iX 3</h3>
+                        <p>Automatico 4 Portas</p>
+                        <strong>R$: 75.000</strong>
+                    </figcaption>
+                </figure>
+                <button class="mButton">Tenho Interese</button>
+            </div>
+            <div class="Card">
+                <figure>
+                    <img src="https://cdn.motor1.com/images/mgl/broej/s3/2020-chevrolet-corvette-stingray.jpg"
+                        alt="Carro em Destaque: Covetter C8">
+                    <figcaption class="container-flex">
+                        <h3>chevrolet corvette c8</h3>
+                        <p>15 Cabalhos de Forca + Turbo</p>
+                        <strong>R$: 52.000</strong>
+                    </figcaption>
+                </figure>
+                <button class="mButton">Tenho Interese</button>
+            </div>
+            <div class="Card">
+                <figure>
+                    <img src="https://cdn.topgear.es/sites/navi.axelspringer.es/public/media/image/2023/01/mustang-shelby-edicion-centenario-2933062.jpg"
+                        alt="Carro em Destaque:mustang gt 2024 ">
+                    <figcaption class="container-flex">
+                        <h3>mustang gt 2024</h3>
+                        <p>15 Cabalhos de Força + Gama de Velocidade</p>
+                        <strong>R$:85.000</strong>
+                    </figcaption>
+                </figure>
+                <button class="mButton">Tenho Interese</button>
+            </div>     
+            <div class="Card">
+                <figure>
+                    <img src="https://revistacarro.com.br/wp-content/uploads/2022/05/Ferrari-SP48-Unica_3.jpg"
+                        alt="Carro em Destaque:Ferrari SP48">
+                    <figcaption class="container-flex">
+                        <h3>Ferrari SP48</h3>
+                        <p>25 Cabalhos de Força </p>
+                        <strong>R$:55.000</strong>
+                    </figcaption>
+                </figure>
+                <button class="mButton">Tenho Interese</button>
+            </div>       
+        </div>
+    </div>
+    <!--Promoções-->
+    <div id="Promocoes">
+        <h2>Nossas Promoções</h2>
+        <div id="promocoesContainer">
+            <div class="pCard">
+                <figure>
+                    <img src="https://quatrorodas.abril.com.br/wp-content/uploads/2021/10/BMW-iX-xDrive-i40-Mineral-White-003-e1634235799239.jpg?quality=70&strip=info&w=1280&h=720&crop=1"
+                        alt="Carro em Destaque: ">
+                    <figcaption class="container-flex">
+                        <h3>BMW iX 3</h3>
+                        <p>Automatico 4 Portas</p>
+                        <del>R$: 124.000</del>
+                        <strong>R$: 75.000</strong>
+                    </figcaption>
+                </figure>
+                <button class="mButton">Tenho Interese</button>
+            </div>
+            <div class="pCard">
+                <figure>
+                    <img src="https://cdn.motor1.com/images/mgl/broej/s3/2020-chevrolet-corvette-stingray.jpg"
+                        alt="Carro em Destaque: Covetter C8">
+                    <figcaption class="container-flex">
+                        <h3>chevrolet corvette c8</h3>
+                        <p>15 Cabalhos de Forca + Turbo</p>
+                        <del>R$: 205.000</del>
+                        <strong>R$: 52.000</strong>
+                    </figcaption>
+                </figure>
+                <button class="mButton">Tenho Interese</button>
 
-<!--Main-->
-    <main>
-        
-        <!--Formulario-->
-        
-        <form id="form-modulo7">
-            <label>Campo A: <input type="number" id="campoA" value="1" min="0" max="10"></label>
-            <label>Campo B: <input type="number" id="campoB" value="1" min="0" max="10"></label>
-            <button id="btn-submit" type="submit">Enviar</button>
+            </div>
+            <div class="pCard">
+                <figure>
+                    <img src="https://cdn.topgear.es/sites/navi.axelspringer.es/public/media/image/2023/01/mustang-shelby-edicion-centenario-2933062.jpg"
+                        alt="Carro em Destaque:mustang gt 2024 ">
+                    <figcaption class="container-flex">
+                        <h3>mustang gt 2024</h3>
+                        <p>15 Cabalhos de Força + Gama de Velocidade</p>
+                        <del>R$: 142.000</del>
+                        <strong>R$:85.000</strong>
+                    </figcaption>
+                </figure>
+                <button class="mButton">Tenho Interese</button>
+            </div>    
+            <div class="pCard">
+                <figure>
+                    <img src="https://revistacarro.com.br/wp-content/uploads/2022/05/Ferrari-SP48-Unica_3.jpg"
+                        alt="Carro em Destaque:Ferrari-SP48">
+                    <figcaption class="container-flex">
+                        <h3>Ferrari SP48</h3>
+                        <p>25 Cabalhos de Força + Gama de Velocidade</p>
+                        <del>R$: 500.000</del>
+                        <strong>R$:102.000</strong>
+                    </figcaption>
+                </figure>
+                <button class="mButton">Tenho Interese</button>
+            </div>         
+        </div>
+    </div>
+    <!--Formulario de Contato-->
+    <section id="contato">
+        <h2>Formulario de Contato</h2>
+        <form>
+            <input type="text" name="nome" id="fnome" placeholder="Nome Completo">
+            <input type="email" name="email" id="femail"
+            placeholder="Email">
+            <input type="tel" name="tel" id="ftel"
+            placeholder="Celular">
+            <input type="text" name="cpf" id="fcpf"
+            placeholder="CPF">
+            <input type="text" name="endereco" id="fdir"
+            placeholder="Endereço">
+            <input type="text" name="cep" id="fcep"
+            placeholder="CEP">
+            <button class="mButton">Enviar</button>
         </form>
-
-        <p class="Message"> Message Wrapper</p>
-    </main>
-
-    <script src="./index.js"></script>
+    </section>
+    
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="src/slick/slick.min.js"></script>
+    <script src="src/mask/jquery.mask.min.js"></script>
+    <script src="src/validation/jquery.validate.min.js"></script>
+    <script src="index.js"></script>
 </body>
+
 </html>
