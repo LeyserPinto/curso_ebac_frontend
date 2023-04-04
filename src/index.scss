@@ -1,0 +1,71 @@
+@use './config/config';
+@use './config/variaveis';
+
+body{
+    background-color: variaveis.$bgColor;
+}
+
+.container{
+    max-width: variaveis.$maxWidth;
+    width: variaveis.$w100;
+    margin: 0 auto;
+}
+//Header
+header{
+    background-color: variaveis.$navColor;
+    position: sticky;
+    top: 0%;
+    //Container 
+    & > .container {
+        @include config.flex(space-between, center);
+        @include config.set-padding(16px, 0);
+        //Menu
+        & .menu {
+            @include config.flex($gap: 16px);
+            //Menu Li
+            & > li a{
+                font-weight: bold;
+                text-decoration: none;
+                color: #fff;
+            }
+        }
+    }
+}
+
+//main section
+section{
+    @include config.set-padding(56px, 0);
+    & .products{
+        @include config.grid(3, 30%, 3%, 4%);
+        @include config.set-margin($t: 40px);
+        width: variaveis.$w100;
+        & > .product-item{
+            & > img{
+                width: variaveis.$w100;
+                @include config.set-border-radius(16px);
+            }
+            & > .product-button{
+                @include config.generic-button();
+                
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 1023px){
+    .container{
+        max-width: calc(variaveis.$maxWidth - 20%);       
+    }
+    .products{
+        @include config.grid(2, 48%, 3%, 5%);
+    }
+}
+@media screen and (max-width: 767px){
+    .products{
+        display: block;
+        & > .product-item{
+            @include config.set-margin($b: 32px);
+        }
+    }
+}

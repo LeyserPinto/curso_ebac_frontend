@@ -1,0 +1,52 @@
+@use 'variaveis';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: variaveis.$fonte-Principal;
+}
+
+li{
+    list-style: none;
+}
+
+@mixin flex($jcontent: center, $aitems: center, $gap: 0){
+    display: flex;
+    justify-content: $jcontent;
+    align-items: $aitems;
+    gap: $gap;
+}
+@mixin grid($num-col: 0, $col-size: 0%, $col-gap : 0%, $row-gap: 0%){
+    display: grid;
+    grid-template-columns: repeat($num-col, $col-size);
+    column-gap: $col-gap;
+    row-gap: $row-gap;
+
+}
+@mixin set-border-radius($radius){
+    border-radius:  $radius;
+}
+@mixin set-padding($top-bottom, $left-rigth){
+    padding: $top-bottom $left-rigth;
+}
+@mixin set-margin($t: 0px, $r: 0px, $b: 0px, $l: 0px){
+    margin-top: $t;
+    margin-right: $r;
+    margin-bottom: $b;
+    margin-left: $l;
+}
+
+@mixin generic-button{
+    display: block;
+    text-align: center;
+    background-color: variaveis.$buttonColor;
+    text-decoration: variaveis.$text-decoration-none;
+    color: variaveis.$textColorLigth;
+    @include set-border-radius(8px);
+    @include set-padding(8px, 0);
+    @include set-margin($t: 18px);
+    &:hover{
+        background-color: variaveis.$buttonHoverColor;
+    }
+}
