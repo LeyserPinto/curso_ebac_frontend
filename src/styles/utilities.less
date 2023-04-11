@@ -1,0 +1,59 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500&display=swap');
+
+
+@maxWidth: 1024px;
+
+@breakTablet: ~"screen and (max-width: 1023px)";
+@breakMobile: ~"screen and (max-width: 767px)";
+
+//Reset CSS Styles
+.resetConfig{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto, sans-serif;
+    
+    li {
+        list-style: none;
+    }
+}
+
+.setDisplayFlex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.setDisplayGrid(@columns: 3, @colWidth:30%, @colGap: 1%){
+    display: grid;
+    grid-template-columns: repeat(@columns, @colWidth);
+    column-gap: @colGap;
+    row-gap: 4%;    
+}
+.setPaddings(@pt:0px,@pe:0px,@pb:0px,@ps:0px,){
+    padding-top: @pt;
+    padding-right: @pe;
+    padding-bottom: @pb;
+    padding-left: @ps;
+}
+.setMargins(@mt:0px,@me:0px,@mb:0px,@ms:0px,){
+    margin-top: @mt;
+    margin-right: @me;
+    margin-bottom: @mb;
+    margin-left: @ms;
+}
+
+
+
+//Colors Maps
+#webColors(){
+    background-color-primary: #f5f6fa;
+    background-color-secondary: #182C61;
+    button-color: #44bd32;
+    button-hover-color: #44bd32;
+    nav-links-color: #fff;
+}
