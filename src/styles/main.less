@@ -1,0 +1,73 @@
+@import url('./utilities.less');
+
+body {
+    font-family: @fontRoboto;
+    background-color: #webColors[bg-color];
+}
+
+h1 {
+    font-family: @fontLobster;
+    color: #webColors[text-color];
+    font-size: 4rem;
+}
+
+main{
+    .setTamanho(100%, auto);
+    .setMargin(0, auto , 0 , auto);
+    max-width: 960px;
+    text-align: center;
+
+    button{
+        background-color: #webColors[button-color];
+        .setTamanho(250px, 50px);
+        font-size: 1.5rem;
+        font-family: @fontRoboto;
+        font-weight: bold;
+        outline: none;
+        color: #webColors[text-color-d];
+        border: 2px solid #webColors[text-color-d];
+        border-radius: 8px;
+        cursor: pointer;
+    }
+}
+
+#input{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 2rem;
+    gap: 30px;
+    color: #webColors[text-color];
+    
+    input{
+        .setTamanho(150px, 50px);
+        .setMargin(@mb: 3rem);
+        font-size: 2.5rem;
+        text-align: center;
+        background-color: #webColors[bg-color];
+        color: #webColors[text-color];
+        border: none;
+        border-bottom: 4px solid #webColors[text-color];
+        outline: none;
+        
+    }
+}
+
+.resultado{
+    .setTamanho(70%, auto);
+    .setMargin(20px, auto , 0 , auto);
+    max-width: 960px;
+    text-align: center;
+    border: dashed 3px #webColors[text-color];
+    font-size: 1.5rem;
+    padding: 15px;
+    color: #webColors[text-color];
+    display: none;
+    & span{
+        .setMargin(@mt: 25px);
+        font-size: 3.5rem;
+        font-weight: bold;
+        letter-spacing: 3px;
+        display: block;
+    }
+}
